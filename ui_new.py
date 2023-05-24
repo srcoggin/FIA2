@@ -40,6 +40,7 @@ class MainWindow():
         self.ui.Home_Patient_2.clicked.connect(self.Home)
         self.ui.Tests_Patient_2.clicked.connect(self.Tests)
         self.ui.TestsTaken_Patient_2.clicked.connect(self.TestsTaken)
+        self.ui.Previous_Page_Patients.clicked.connect(self.Previous_Page_Patients)
         
 
         #TestsTaken Banner Buttons
@@ -51,9 +52,18 @@ class MainWindow():
         #Patient Use Buttons
         self.ui.ListOfPatient_Button.clicked.connect(self.ListOfPatients)
         self.ui.Search_Patient_Button.clicked.connect(self.Search_Patient)
+        self.ui.Remove_Patient_Button.clicked.connect(self.Remove_Patient)
+        self.ui.Next_Page_Patients.clicked.connect(self.Next_Patient_Page)
 
         #Test Use Buttons
         self.ui.ListOfTests_Button.clicked.connect(self.ListOfPatients)
+        self.ui.Remove_Test_Button.clicked.connect(self.Remove_Test)
+        
+    def Previous_Page_Patients(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.Patient)
+
+    def Next_Patient_Page(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.Patients_2)
 
     def Search_Patient(self):
         name = str(self.ui.Search_Patient_Name.text())
@@ -76,7 +86,23 @@ Weight:   {}""".format(patient[0], patient[1], patient[2], patient[3], patient[4
 
     def Remove_Patient(self):
         name = self.ui.Remove_Patient_Name.text()
-        ds.remove_patient(name)
+        patients = ds.select_patients_from_list
+        if name not in patients:
+            self.error()
+        else:
+            output = "Patient Removed"
+            ds.remove_patient(name)
+            self.ui.Remove_Patient_Confirm_Field.setText(output)
+
+    def Remove_Test(self):
+        code = self.ui.Remove_Test_Code.text()
+        test = ds.retrieve_test_code()
+        if code not in test:
+            self.error()
+        else:
+            output = "Test Removed"
+            ds.remove_test(code)
+            self.ui.Remove_Test_Confirm_Field.setText(output)
 
     def ListOfPatients(self):
         self.ui.List_Of_Patients_Field.setText(ds.select_patients_from_list())
@@ -84,7 +110,7 @@ Weight:   {}""".format(patient[0], patient[1], patient[2], patient[3], patient[4
     def ListOfTests(self):
         self.ui.List_Of_Tests_Field.setText(ds.display_all_tests)
         
-    def error(self, Feild):
+    def error(self):
         pass
     #PLEASE MAKE ME A POP UP, DONT FORGET AGAIN IDIOT
 
