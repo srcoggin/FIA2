@@ -92,7 +92,7 @@ class MainWindow():
         test = self.ui.Update_Test_Code.text()
         tests_list = ds.retrieve_test_code()
         if test not in tests_list:
-            self.error
+            self.error()
         else:
             if self.ui.Test_Name_Radio.isChecked():
                 tests = ds.select_test(test)
@@ -157,7 +157,7 @@ class MainWindow():
                 updated_selection = 3
                 ds.update_patient(updated_selection, patient_postcode, select_patient)
             else:
-                self.error
+                self.error()
 
      
 
@@ -200,7 +200,7 @@ class MainWindow():
         self.ui.stackedWidget.setCurrentWidget(self.ui.Patients_2)
 
     def Search_Patient(self):
-        paitent = self.ui.Search_Patient_Name.text()
+        patient = self.ui.Search_Patient_Name.text()
         patients = ds.select_patients_from_list()
         if patient not in patients:
             self.error()
