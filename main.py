@@ -1,6 +1,6 @@
 # imports the relevant classes from each of our modular files
 from datastore import DataStore
-from ui_new import MainWindow
+from MainWindow import MainWindow
 import sys
 from PyQt5 import QtCore
 from PyQt5.QtWidgets import QApplication
@@ -163,10 +163,10 @@ app.exec_()
 # ui.welcome()
 
 # Application Menu
-# running = True
-# while running:
-#     QtCore.QCoreApplication.processEvents()
-    # menu_selection = ui.menu()
+running = True
+while running:
+    QtCore.QCoreApplication.processEvents()
+    menu_selection = ui.menu()
     # if menu_selection == 1:
     #     display_patients()
     # elif menu_selection == 2:
