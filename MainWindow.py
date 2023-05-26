@@ -66,6 +66,7 @@ class MainWindow():
         #Test 2 Use Buttons
         self.ui.Previous_Page_Test.clicked.connect(self.Previous_Page_Tests)
         self.ui.ListOfTests_Button.clicked.connect(self.ListOfTests)
+        self.ui.Logo_Button.clicked.connect(self.ssshhhSECRET)
         self.ui.Add_Test_Button.clicked.connect(self.Add_New_Test)
         
         #Patient 2 Use Buttons
@@ -219,22 +220,21 @@ class MainWindow():
     def safety_popup(self):
         msg = QMessageBox()
         msg.setText("Are you sure you want to do this?")
-        msg.setWindowTitle("ERROR!")
+        msg.setWindowTitle("Are You Sure?")
         #Set the buttons to include a close button
         msg.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
 
         # Show the message box and retrieve the button clicked
         button_clicked = msg.exec()
-
         #Check which button was clicked
         if button_clicked == QMessageBox.Yes:
-            print("Yes clicked!")
+            print("Real 100")
         elif button_clicked == QMessageBox.No:
-            print("No clicked!")
+            print("Brad")
         # Show the message box
 
     def Remove_Patient(self):
-        msg = QMainWindow()
+        msg = QMessageBox()
         msg.setText("Are you sure you want to do this?")
         msg.setWindowTitle("Are You Sure?")
         #Set the buttons to include a close button
@@ -243,20 +243,19 @@ class MainWindow():
         button_clicked = msg.exec()
         #Check which button was clicked
         if button_clicked == QMessageBox.Yes:
-            self.safety_popup()
-            name = self.ui.Remove_Patient_Name.text()
-            patients = ds.select_patients_from_list
-            if name not in patients:
+            patient = self.ui.Remove_Patient_Name.text()
+            patients = ds.select_patients_from_list()
+            if patient not in patients:
                 self.error()
             else:
-                ds.remove_patient(name)
+                ds.remove_patient(patient)
                 self.successful_popup()
         elif button_clicked == QMessageBox.No:
             QMessageBox.close
    
 
     def Remove_Test(self):
-        msg = QMainWindow()
+        msg = QMessageBox()
         msg.setText("Are you sure you want to do this?")
         msg.setWindowTitle("Are You Sure?")
         #Set the buttons to include a close button
@@ -280,11 +279,20 @@ class MainWindow():
 
 
     def ListOfPatients(self):
-        self.ui.List_Of_Patients_Field(ds.select_patients_from_list())
+        self.ui.List_Of_Patients_Field.setText(ds.select_patients_from_list, 1)
 
     def ListOfTests(self):
-        self.ui.List_Of_Tests_Field.setText(ds.display_all_tests)
+        self.ui.List_Of_Tests_Field.setText(ds.display_all_tests, 1)
         
+    def ssshhhSECRET(self):
+        msg = QMessageBox()
+        msg.setText("look at u bro, this is kinda like the moment where you click freddys nose in fnaf like fr.")
+        msg.setWindowTitle("SECRET FOUND!")
+        #Set the buttons to include a close button
+        msg.setStandardButtons(QMessageBox.close)
+        # Show the message box and retrieve the button clicked
+        msg.exec()
+
     def error(self):
         msg = QMessageBox()
         # Set the text and title
