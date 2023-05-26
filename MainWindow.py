@@ -2,11 +2,13 @@ from PyQt5.QtWidgets import QMainWindow
 import sys
 from UserInterface import Ui_Form
 from datastore import DataStore
+from PyQt5.QtWidgets import QMessageBox
 
 ds = DataStore()
 
 class MainWindow():
     def __init__(self):
+        msg = QMessageBox()
         self.main_win = QMainWindow()
         self.ui = Ui_Form()
         self.ui.setupUi(self.main_win)
@@ -15,6 +17,7 @@ class MainWindow():
         #Welcome Page Buttons
         self.ui.Continue_Button.clicked.connect(self.Home)
         self.ui.Exit_Button.clicked.connect(self.Exit)
+        self.ui.Author_Button.clicked.connect(self.About_Me_Popup)
 
         #Home Banner Buttons
         self.ui.Tests_Home.clicked.connect(self.Tests)
@@ -75,13 +78,12 @@ class MainWindow():
         self.ui.Insert_Patient_Test_Button.clicked.connect(self.Add_Test_Taken)
 
     def Add_Test_Taken(self):
-        output = "Test has been Updated!"
         name = self.ui.Insert_Patient_Name.text()
         code = self.ui.Insert_Test_Code.text() 
         date = self.ui.Insert_Date_Test_Taken.text() 
         result = self.ui.Insert_Test_Results.text() 
         ds.insert_patient_test_results(name, code, date, result)
-        self.ui.TestTaken_Confirm.setText(output)
+        self.successful_popup()
 
     def Search_TestTaken(self):
         patient = self.ui.Search_Test_Taken_Name.text()
@@ -133,7 +135,7 @@ class MainWindow():
                 updated_selection = 1
                 ds.update_patient(updated_selection, dob, select_patient)
 
-            elif self.ui.Student_Number_Radio.ischecked():
+            elif self.ui.Student_Number_Radio.isChecked():
                 student_num = self.ui.Update_Patient_Student_Number.text()
                 select_patient = ds.select_patient(patient)
                 updated_selection = 0
@@ -163,16 +165,14 @@ class MainWindow():
 
 
     def Add_New_Test(self):
-        output = "Test Added!"
         code = self.ui.Add_Test_Code.text()
         name = self.ui.Add_Test_Name.text()
         description = self.ui.Add_Test_Desc.text()
         price = self.ui.Add_Test_Price.text()
         ds.insert_new_test(code, name, description, price)
-        self.ui.Add_Test_Confirm.setText(output)
+        self.successful_popup()
 
     def Add_New_Patient(self):
-        output = "Patient Added!"
         name = self.ui.Add_Patient_Name.text()
         num = self.ui.Add_Patient_Student_Number.text()
         dob = self.ui.Add_Patient_DOB.text()
@@ -181,7 +181,7 @@ class MainWindow():
         height = self.ui.Add_Patient_Height.text()
         weight = self.ui.Add_Patient_Weight.text()
         ds.insert_patient(name, num, dob, add, postcode, height, weight)
-        self.ui.Add_Patient_Confirm.setText(output)
+        self.successful_popup()
 
 
     def ListOfTests(self):
@@ -207,33 +207,77 @@ class MainWindow():
         else:
             patient = ds.select_patient(patient)
             self.ui.Search_Patient_Field.setText(
-                """Student Number: {}
-                    Date of Birth: {}
-                    Address:  {}
-                    Postcode: {}
-                    Height:   {}
-                    Weight:   {}""".format(patient[0], patient[1], patient[2], patient[3], patient[4], patient[5]))
+                """
+            Student Number: {}
+            Date of Birth: {}
+            Address:  {}
+            Postcode: {}
+            Height:   {}
+            Weight:   {}""".format(patient[0], patient[1], patient[2], patient[3], patient[4], patient[5]))
 
+
+    def safety_popup(self):
+        msg = QMessageBox()
+        msg.setText("Are you sure you want to do this?")
+        msg.setWindowTitle("ERROR!")
+        #Set the buttons to include a close button
+        msg.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
+
+        # Show the message box and retrieve the button clicked
+        button_clicked = msg.exec()
+
+        #Check which button was clicked
+        if button_clicked == QMessageBox.Yes:
+            print("Yes clicked!")
+        elif button_clicked == QMessageBox.No:
+            print("No clicked!")
+        # Show the message box
 
     def Remove_Patient(self):
-        name = self.ui.Remove_Patient_Name.text()
-        patients = ds.select_patients_from_list
-        if name not in patients:
-            self.error()
-        else:
-            output = "Patient Removed"
-            ds.remove_patient(name)
-            self.ui.Remove_Patient_Confirm_Field.setText(output)
+        msg = QMainWindow()
+        msg.setText("Are you sure you want to do this?")
+        msg.setWindowTitle("Are You Sure?")
+        #Set the buttons to include a close button
+        msg.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
+        # Show the message box and retrieve the button clicked
+        button_clicked = msg.exec()
+        #Check which button was clicked
+        if button_clicked == QMessageBox.Yes:
+            self.safety_popup()
+            name = self.ui.Remove_Patient_Name.text()
+            patients = ds.select_patients_from_list
+            if name not in patients:
+                self.error()
+            else:
+                ds.remove_patient(name)
+                self.successful_popup()
+        elif button_clicked == QMessageBox.No:
+            QMessageBox.close
+   
 
     def Remove_Test(self):
-        code = self.ui.Remove_Test_Code.text()
-        test = ds.retrieve_test_code()
-        if code not in test:
-            self.error()
-        else:
-            output = "Test Removed"
-            ds.remove_test(code)
-            self.ui.Remove_Test_Confirm_Field.setText(output)
+        msg = QMainWindow()
+        msg.setText("Are you sure you want to do this?")
+        msg.setWindowTitle("Are You Sure?")
+        #Set the buttons to include a close button
+        msg.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
+        # Show the message box and retrieve the button clicked
+        button_clicked = msg.exec()
+        #Check which button was clicked
+        if button_clicked == QMessageBox.Yes:
+            code = self.ui.Remove_Test_Code.text()
+            test = ds.retrieve_test_code()
+            if code not in test:
+                self.error()
+            else:
+                ds.remove_test(code)
+                self.successful_popup()
+        elif button_clicked == QMessageBox.No:
+            QMessageBox.close
+
+
+
+
 
     def ListOfPatients(self):
         self.ui.List_Of_Patients_Field(ds.select_patients_from_list())
@@ -242,8 +286,14 @@ class MainWindow():
         self.ui.List_Of_Tests_Field.setText(ds.display_all_tests)
         
     def error(self):
-        pass
-    #PLEASE MAKE ME A POP UP, DONT FORGET AGAIN IDIOT
+        msg = QMessageBox()
+        # Set the text and title
+        msg.setText("Error! Something has Gone Wrong! Please Try Again.")
+        msg.setWindowTitle("ERROR!")
+        #Set the buttons to include a close button
+        msg.setStandardButtons(QMessageBox.Close)
+        # Show the message box
+        msg.exec()
 
     def Exit(self):
         exit()
@@ -253,6 +303,36 @@ class MainWindow():
 
     def TestsTaken(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.TestsTaken)
+
+    def successful_popup(self):
+        msg = QMessageBox()
+        # Set the text and title
+        msg.setText("Operation Complete!")
+        msg.setWindowTitle("Done!")
+        #Set the buttons to include a close button
+        msg.setStandardButtons(QMessageBox.Close)
+        # Show the message box
+        msg.exec()
+
+    def About_Me_Popup(self):
+        msg = QMessageBox()
+        fia1 = "Fia1"
+        tutor_app = ("Tutor App")
+        github = ("@srcoggin")
+        # Set the text and title
+        msg.setText(f"""
+                Thank you for using Bundy Health Care! 
+                This App was Coded and Developed by Will Coggins 
+                This App was Devleoped from 23/05/2023 to 26/05/2023
+                Please Enjoy my other works such as {fia1}, and {tutor_app}. 
+                Both of which can be found on my github: {github}
+                    """)
+        msg.setWindowTitle("About Me!")
+        #Set the buttons to include a close button
+        msg.setStandardButtons(QMessageBox.Close)
+    
+        # Show the message box
+        msg.exec()
 
     def Home(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.Home)
