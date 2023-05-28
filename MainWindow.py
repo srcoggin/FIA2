@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QMainWindow
 import sys
-from UserInterface import Ui_Form
+from UserInterface import Ui_MainWindow
 from datastore import DataStore
 from PyQt5.QtWidgets import QMessageBox
 
@@ -10,7 +10,7 @@ class MainWindow():
     def __init__(self):
         msg = QMessageBox()
         self.main_win = QMainWindow()
-        self.ui = Ui_Form()
+        self.ui = Ui_MainWindow()
         self.ui.setupUi(self.main_win)
         self.ui.stackedWidget.setCurrentWidget(self.ui.Welcome_Page)
         
