@@ -84,24 +84,25 @@ class MainWindow():
         code = self.ui.Insert_Test_Code.text() 
         date = self.ui.Insert_Date_Test_Taken.text() 
         result = self.ui.Insert_Test_Results.text() 
-        if ds.insert_patient_test_results(name, code, date, result):
-            self.successful_popup()
-            self.ui.Insert_Patient_Name.clear()
-            self.ui.Insert_Test_Code.clear()
-            self.ui.Insert_Date_Test_Taken.clear() 
-            self.ui.Insert_Test_Results.clear()
-        else:
-            self.error()
+        ds.insert_patient_test_results(name, code, date, result)
+        self.successful_popup()
+        self.ui.Insert_Patient_Name.clear()
+        self.ui.Insert_Test_Code.clear()
+        self.ui.Insert_Date_Test_Taken.clear() 
+        self.ui.Insert_Test_Results.clear()
+
 
     def Search_TestTaken(self):
-        patient = self.ui.Search_Test_Taken_Name.text()
-        info = ds.select_patient_results_all_tests(patient)
-        self.ui.TestTaken_Seach_Field.setText(info)
+        patient = ""
+        for i in ds.select_patient_results_all_tests(self.ui.Search_Test_Taken_Name.text()):
+            print(i)
+            patient += f"{i} \n"
+        self.ui.TestTaken_Seach_Field.setText(patient)
 
     def Update_Test_Details(self):
-        test = self.ui.Update_Test_Code.text()
+        tests = self.ui.Update_Test_Code.text()
         tests_list = ds.retrieve_test_code()
-        if test not in tests_list:
+        if tests not in tests_list:
             self.error()
         else:
             if self.ui.Test_Name_Radio.isChecked():
@@ -113,10 +114,12 @@ class MainWindow():
                 # Show the message box and retrieve the button clicked
                 button_clicked = msg.exec()
                 if button_clicked == QMessageBox.Yes:
-                    tests = ds.select_test(test)
                     updated_value = self.ui.UpdateTest_Name.text()
                     updated_selection = 0
                     ds.update_test(updated_selection, updated_value, tests)
+                    self.successful_popup()
+                    self.ui.Update_Test_Code.clear()
+                    self.ui.UpdateTest_Name.clear()
                 elif button_clicked == QMessageBox.No:
                     QMessageBox.close
             
@@ -129,10 +132,12 @@ class MainWindow():
                 # Show the message box and retrieve the button clicked
                 button_clicked = msg.exec()
                 if button_clicked == QMessageBox.Yes:
-                    tests = ds.select_test(test)
                     updated_value = self.ui.Update_Test_Desc.text()
                     updated_selection = 1
                     ds.update_test(updated_selection, updated_value, tests)
+                    self.successful_popup()
+                    self.ui.Update_Test_Code.clear()
+                    self.ui.Update_Test_Desc.clear()
                 elif button_clicked == QMessageBox.No:
                     QMessageBox.close
 
@@ -145,10 +150,12 @@ class MainWindow():
                 # Show the message box and retrieve the button clicked
                 button_clicked = msg.exec()
                 if button_clicked == QMessageBox.Yes:
-                    tests = ds.select_test(test)
                     updated_value = self.ui.Update_Test_Price.text()
                     updated_selection = 2
                     ds.update_test(updated_selection, updated_value, tests)
+                    self.successful_popup()
+                    self.ui.Update_Test_Code.clear()
+                    self.ui.Update_Test_Price.clear()
                 elif button_clicked == QMessageBox.No:
                     QMessageBox.close
             else:
@@ -179,6 +186,9 @@ class MainWindow():
                     address = self.ui.Update_Patient_Address_2.text()
                     updated_selection = 2
                     ds.update_patient(updated_selection, address, patient)
+                    self.successful_popup()
+                    self.ui.Update_Patient_Name.clear()
+                    self.ui.Update_Patient_Address_2.clear()
                 elif button_clicked == QMessageBox.No:
                     QMessageBox.close
 
@@ -194,6 +204,9 @@ class MainWindow():
                     dob = self.ui.Update_Patient_DOB.text() 
                     updated_selection = 1
                     ds.update_patient(updated_selection, dob, patient)
+                    self.successful_popup()
+                    self.ui.Update_Patient_Name.clear()
+                    self.ui.Update_Patient_DOB.clear()
                 elif button_clicked == QMessageBox.No:
                     QMessageBox.close
 
@@ -209,10 +222,13 @@ class MainWindow():
                     student_num = self.ui.Update_Patient_Student_Number.text()
                     updated_selection = 0
                     ds.update_patient(updated_selection, student_num, patient)
+                    self.successful_popup()
+                    self.ui.Update_Patient_Name.clear()
+                    self.ui.Update_Patient_Student_Number.clear()
                 elif button_clicked == QMessageBox.No:
                     QMessageBox.close
 
-            elif self.ui.Patient_Height_Radio.ischecked():
+            elif self.ui.Patient_Height_Radio.isChecked():
                 msg = QMessageBox()
                 #sets text of the pop up
                 msg.setText("Are you sure you want to do this?")
@@ -224,6 +240,9 @@ class MainWindow():
                     patient_height = self.ui.Update_Patient_Height.text()
                     updated_selection = 4
                     ds.update_patient(updated_selection, patient_height, patient)
+                    self.successful_popup()
+                    self.ui.Update_Patient_Name.clear()
+                    self.ui.Update_Patient_Height.clear()
                 elif button_clicked == QMessageBox.No:
                     QMessageBox.close
 
@@ -239,6 +258,9 @@ class MainWindow():
                     patient_weight = self.ui.Update_Patient_Weight.text()
                     updated_selection = 5
                     ds.update_patient(updated_selection, patient_weight, patient)
+                    self.successful_popup()
+                    self.ui.Update_Patient_Name.clear()
+                    self.ui.Update_Patient_Weight.clear()
                 elif button_clicked == QMessageBox.No:
                     QMessageBox.close
 
@@ -254,6 +276,9 @@ class MainWindow():
                     patient_postcode = self.ui.Update_Patient_Postcode.text() 
                     updated_selection = 3
                     ds.update_patient(updated_selection, patient_postcode, patient)
+                    self.successful_popup()
+                    self.ui.Update_Patient_Name.clear()
+                    self.ui.Update_Patient_Postcode.clear()
                 if button_clicked == QMessageBox.No:
                         QMessageBox.close
             #if none of the options are selected it pops up with the error box
@@ -271,6 +296,11 @@ class MainWindow():
         price = self.ui.Add_Test_Price.text()
         #creates the new test in data store
         ds.insert_new_test(code, name, description, price)
+        #Clears Line Edit
+        self.ui.Add_Test_Code.clear()
+        self.ui.Add_Test_Name.clear()
+        self.ui.Add_Test_Desc.clear()
+        self.ui.Add_Test_Price.clear()
         #displays that the action was successful
         self.successful_popup()
 
@@ -285,13 +315,17 @@ class MainWindow():
         weight = self.ui.Add_Patient_Weight.text()
         #adds new patient in the data store
         ds.insert_patient(name, num, dob, add, postcode, height, weight)
+        #Clears Line Edit
+        self.ui.Add_Patient_Name.clear()
+        self.ui.Add_Patient_Student_Number.clear()
+        self.ui.Add_Patient_DOB.clear()
+        self.ui.Add_Patient_Address.clear()
+        self.ui.Add_Patient_Postcode.clear()
+        self.ui.Add_Patient_Height.clear()
+        self.ui.Add_Patient_Weight.clear()
         #displays that the action was successful
         self.successful_popup()
 
-
-    def ListOfTests(self):
-        #replaces the label with all the test codes
-        self.ui.List_Of_Tests_Field.setText(ds.display_all_tests)    
 
     def Previous_Page_Tests(self):
         #changes to the previous page
@@ -401,7 +435,7 @@ class MainWindow():
     def ListOfPatients(self):
         #gathers the list of patients from data store and displays them
         name =  ""
-        for i in ds.select_patients_from_list([0]):
+        for i in ds.select_patients_from_list():
             name += f"{i} \n"
         self.ui.List_Of_Patients_Field.setText(name)
 
@@ -418,7 +452,7 @@ class MainWindow():
         msg.setText("look at u bro, this is kinda like the moment where you click freddys nose in fnaf like fr.")
         msg.setWindowTitle("SECRET FOUND!")
         #Set the buttons to include a close button
-        msg.setStandardButtons(QMessageBox.close)
+        msg.setStandardButtons(QMessageBox.Close)
         # Show the message box and retrieve the button clicked (excecutes the pop up)
         msg.exec()
 
