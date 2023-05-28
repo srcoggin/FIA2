@@ -400,11 +400,17 @@ class MainWindow():
 
     def ListOfPatients(self):
         #gathers the list of patients from data store and displays them
-        self.ui.List_Of_Patients_Field.setText(ds.select_patients_from_list, 1)
+        name =  ""
+        for i in ds.select_patients_from_list([0]):
+            name += f"{i} \n"
+        self.ui.List_Of_Patients_Field.setText(name)
 
     def ListOfTests(self):
         #gathers the list of tests from data store and displays them
-        self.ui.List_Of_Tests_Field.setText(ds.display_all_tests, 1)
+        code =  ""
+        for i in ds.display_all_tests():
+            code += f"{i} \n"
+        self.ui.List_Of_Tests_Field.setText(code)
         
     def ssshhhSECRET(self):
         msg = QMessageBox()
