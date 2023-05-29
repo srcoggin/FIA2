@@ -1165,6 +1165,9 @@
             <property name="text">
              <string/>
             </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
             <property name="wordWrap">
              <bool>true</bool>
             </property>
@@ -2239,7 +2242,7 @@ best possible care for their patients.</string>
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>310</x>
@@ -2954,7 +2957,7 @@ best possible care for their patients.</string>
        <x>10</x>
        <y>90</y>
        <width>801</width>
-       <height>371</height>
+       <height>377</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_47">
@@ -3412,6 +3415,12 @@ best possible care for their patients.</string>
           </property>
           <property name="text">
            <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -4634,6 +4643,9 @@ best possible care for their patients.</string>
         </property>
         <property name="text">
          <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
         </property>
         <property name="wordWrap">
          <bool>true</bool>

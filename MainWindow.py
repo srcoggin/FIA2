@@ -97,11 +97,13 @@ class MainWindow():
 
 
     def Search_TestTaken(self):
-        patient = ""
-        for i in ds.select_patient_results_all_tests(self.ui.Search_Test_Taken_Name.text()):
-            print(i)
-            patient += f"{i} \n"
-        self.ui.TestTaken_Seach_Field.setText(patient)
+        info = ds.select_patient_results_all_tests(self.ui.Search_Test_Taken_Name.text())
+        for i in info:
+            self.ui.TestTaken_Seach_Field.setText("""
+Test Code: {}
+Date Test Taken: {}
+Test Result:  {}
+            """.format(i[0], i[1], i[2]))
 
     def Update_Test_Details(self):
         tests = self.ui.Update_Test_Code.text()
@@ -360,12 +362,12 @@ class MainWindow():
             patient = ds.select_patient(patient)
             self.ui.Search_Patient_Field.setText(
                 """
-            Student Number: {}
-            Date of Birth: {}
-            Address:  {}
-            Postcode: {}
-            Height:   {}
-            Weight:   {}""".format(patient[0], patient[1], patient[2], patient[3], patient[4], patient[5]))
+    Student Number: {}
+    Date of Birth: {}
+    Address:  {}
+    Postcode: {}
+    Height:   {}
+    Weight:   {}""".format(patient[0], patient[1], patient[2], patient[3], patient[4], patient[5]))
 
     #this function legit does nothing, i replaced it but woudl rather just keep it here than delete it
     def safety_popup(self):
@@ -441,14 +443,24 @@ class MainWindow():
         name =  ""
         for i in ds.select_patients_from_list():
             name += f"{i} \n"
-        self.ui.List_Of_Patients_Field.setText(name)
+        self.ui.List_Of_Patients_Field.setText(f'''
+List of Patients:    
+
+{name}
+''')
 
     def ListOfTests(self):
         #gathers the list of tests from data store and displays them
-        code =  ""
-        for i in ds.display_all_tests():
-            code += f"{i} \n"
-        self.ui.List_Of_Tests_Field.setText(code)
+        code =  ds.display_all_tests()
+        for k, i in code:
+            self.ui.List_Of_Tests_Field.setText('''
+List Of Tests:
+
+Test Code:  {}
+Expanded:   {}
+Definition: {}
+Price:      {}
+'''.format(k, i[0], i[1], i[2]))
         
     def ssshhhSECRET(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.Brad_Page)
