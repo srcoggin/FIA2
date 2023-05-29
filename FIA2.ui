@@ -35,7 +35,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>6</number>
+    <number>7</number>
    </property>
    <widget class="QWidget" name="Welcome_Page">
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -271,6 +271,160 @@
       </layout>
      </item>
     </layout>
+   </widget>
+   <widget class="QWidget" name="Brad_Page">
+    <widget class="QPushButton" name="Retur_from_brad">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>450</y>
+       <width>220</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>220</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>220</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>17</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Back To Civilization</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>80</y>
+       <width>701</width>
+       <height>271</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_28">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_49">
+        <item>
+         <spacer name="horizontalSpacer_58">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_42">
+          <property name="minimumSize">
+           <size>
+            <width>240</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>240</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>22</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Click if you Dare!!</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_59">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_50">
+        <item>
+         <spacer name="horizontalSpacer_60">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="minimumSize">
+           <size>
+            <width>130</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>130</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>22</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>BRAD</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_61">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
    </widget>
    <widget class="QWidget" name="TestsTaken">
     <widget class="QWidget" name="layoutWidget">
@@ -4441,6 +4595,19 @@ best possible care for their patients.</string>
       </item>
      </layout>
     </widget>
+    <widget class="QPushButton" name="clear_brad">
+     <property name="geometry">
+      <rect>
+       <x>800</x>
+       <y>490</y>
+       <width>21</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QPushButton" name="Logo_Button">
@@ -4475,7 +4642,7 @@ best possible care for their patients.</string>
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>../../FIA2_Digital Solutions/Untitled.png</normaloff>../../FIA2_Digital Solutions/Untitled.png</iconset>
+     <normaloff>../../logofia2.png</normaloff>../../logofia2.png</iconset>
    </property>
    <property name="iconSize">
     <size>

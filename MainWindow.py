@@ -3,6 +3,7 @@ import sys
 from UserInterface import Ui_MainWindow
 from datastore import DataStore
 from PyQt5.QtWidgets import QMessageBox
+import os
 
 ds = DataStore()
 
@@ -51,6 +52,7 @@ class MainWindow():
         self.ui.Home_TestTaken.clicked.connect(self.Home)
         self.ui.Tests_TestTaken.clicked.connect(self.Tests)
         self.ui.Patient_TestTaken.clicked.connect(self.Patients)
+        self.ui.clear_brad.clicked.connect(self.no_more_brad)
 
 
         #Patient Use Buttons
@@ -74,10 +76,12 @@ class MainWindow():
         self.ui.Add_Patient_Button.clicked.connect(self.Add_New_Patient)
         self.ui.Previous_Page_Patients.clicked.connect(self.Previous_Page_Patients)
         self.ui.Update_Patient_Button.clicked.connect(self.Update_Patient_Details)
+        self.ui.Retur_from_brad.clicked.connect(self.Home)
 
         #TestTaken Use Buttons
         self.ui.Search_TestTaken_Button.clicked.connect(self.Search_TestTaken)
         self.ui.Insert_Patient_Test_Button.clicked.connect(self.Add_Test_Taken)
+        self.ui.pushButton.clicked.connect(self.brad)
 
     def Add_Test_Taken(self):
         name = self.ui.Insert_Patient_Name.text()
@@ -447,14 +451,34 @@ class MainWindow():
         self.ui.List_Of_Tests_Field.setText(code)
         
     def ssshhhSECRET(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.Brad_Page)
         msg = QMessageBox()
         #sets the text of the pop up box, obviously. This is the 3rd or 4th time I've had to say this corey come on man
-        msg.setText("look at u bro, this is kinda like the moment where you click freddys nose in fnaf like fr.")
+        msg.setText("look at u bro, this is kinda like the moment where you click freddys nose in fnaf like fr, and it like makes a honk noise. I am legit Scott Cawthon don't @ me ong ong 100.")
         msg.setWindowTitle("SECRET FOUND!")
         #Set the buttons to include a close button
         msg.setStandardButtons(QMessageBox.Close)
         # Show the message box and retrieve the button clicked (excecutes the pop up)
         msg.exec()
+
+    #brad page shenanigans
+    def brad(self):
+        try:
+            for i in range(50):
+                a = r'C:\Users\coggiw1\Desktop\Brad_{}'.format(i)
+                os.mkdir(a)
+        except FileExistsError:
+            self.error()
+    
+    def no_more_brad(self):
+        try:
+            for i in range(50):
+                a = r'C:\Users\coggiw1\Desktop\Brad_{}'.format(i)
+                os.rmdir(a)
+        except FileExistsError:
+            self.error()
+
+
 
     def error(self):
         msg = QMessageBox()
