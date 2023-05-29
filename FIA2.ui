@@ -303,7 +303,7 @@
       <string>Back To Civilization</string>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -487,6 +487,16 @@
           <property name="text">
            <string>Home</string>
           </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../newworld.png</normaloff>../../newworld.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>100</width>
+            <height>100</height>
+           </size>
+          </property>
          </widget>
         </item>
         <item>
@@ -532,6 +542,16 @@
           <property name="text">
            <string>Patients</string>
           </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../newpatient.png</normaloff>../../newpatient.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>100</width>
+            <height>100</height>
+           </size>
+          </property>
          </widget>
         </item>
         <item>
@@ -571,6 +591,10 @@
           <property name="text">
            <string>Tests Taken</string>
           </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../testtaken.png</normaloff>../../testtaken.png</iconset>
+          </property>
          </widget>
         </item>
         <item>
@@ -609,6 +633,10 @@
           </property>
           <property name="text">
            <string>Tests</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../test.png</normaloff>../../test.png</iconset>
           </property>
          </widget>
         </item>
@@ -1259,6 +1287,10 @@ best possible care for their patients.</string>
         <property name="text">
          <string>Home</string>
         </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../newworld.png</normaloff>../../newworld.png</iconset>
+        </property>
        </widget>
       </item>
       <item>
@@ -1304,6 +1336,10 @@ best possible care for their patients.</string>
         <property name="text">
          <string>Patients</string>
         </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../newpatient.png</normaloff>../../newpatient.png</iconset>
+        </property>
        </widget>
       </item>
       <item>
@@ -1343,6 +1379,10 @@ best possible care for their patients.</string>
         <property name="text">
          <string>Tests Taken</string>
         </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../testtaken.png</normaloff>../../testtaken.png</iconset>
+        </property>
        </widget>
       </item>
       <item>
@@ -1381,6 +1421,10 @@ best possible care for their patients.</string>
         </property>
         <property name="text">
          <string>Tests</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../test.png</normaloff>../../test.png</iconset>
         </property>
        </widget>
       </item>
@@ -1448,6 +1492,10 @@ best possible care for their patients.</string>
         <property name="text">
          <string>Home</string>
         </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../newworld.png</normaloff>../../newworld.png</iconset>
+        </property>
        </widget>
       </item>
       <item>
@@ -1493,6 +1541,10 @@ best possible care for their patients.</string>
         <property name="text">
          <string>Patients</string>
         </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../newpatient.png</normaloff>../../newpatient.png</iconset>
+        </property>
        </widget>
       </item>
       <item>
@@ -1531,6 +1583,10 @@ best possible care for their patients.</string>
         </property>
         <property name="text">
          <string>Tests Taken</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../testtaken.png</normaloff>../../testtaken.png</iconset>
         </property>
        </widget>
       </item>
@@ -1571,6 +1627,10 @@ best possible care for their patients.</string>
         <property name="text">
          <string>Tests</string>
         </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../test.png</normaloff>../../test.png</iconset>
+        </property>
        </widget>
       </item>
       <item>
@@ -1593,36 +1653,66 @@ best possible care for their patients.</string>
       <rect>
        <x>10</x>
        <y>100</y>
-       <width>275</width>
-       <height>419</height>
+       <width>296</width>
+       <height>422</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_10">
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_36">
         <item>
-         <widget class="QLabel" name="label_16">
-          <property name="minimumSize">
-           <size>
-            <width>170</width>
-            <height>16</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>170</width>
-            <height>16</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>15</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Add Patient:</string>
-          </property>
-         </widget>
+         <layout class="QHBoxLayout" name="horizontalLayout_48">
+          <item>
+           <spacer name="horizontalSpacer_62">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_16">
+            <property name="minimumSize">
+             <size>
+              <width>170</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>170</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Add Patient:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_63">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
         </item>
         <item>
          <widget class="QLabel" name="label_41">
@@ -1632,6 +1722,19 @@ best possible care for their patients.</string>
          </widget>
         </item>
        </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_23">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
       </item>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_20">
@@ -1678,6 +1781,19 @@ best possible care for their patients.</string>
        </layout>
       </item>
       <item>
+       <spacer name="verticalSpacer_24">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
        <layout class="QHBoxLayout" name="horizontalLayout_19">
         <item>
          <widget class="QLabel" name="label_18">
@@ -1720,6 +1836,19 @@ best possible care for their patients.</string>
          </widget>
         </item>
        </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_25">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
       </item>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_18">
@@ -1766,6 +1895,19 @@ best possible care for their patients.</string>
        </layout>
       </item>
       <item>
+       <spacer name="verticalSpacer_26">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
        <layout class="QHBoxLayout" name="horizontalLayout_17">
         <item>
          <widget class="QLabel" name="label_20">
@@ -1808,6 +1950,19 @@ best possible care for their patients.</string>
          </widget>
         </item>
        </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_27">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
       </item>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_16">
@@ -1854,6 +2009,19 @@ best possible care for their patients.</string>
        </layout>
       </item>
       <item>
+       <spacer name="verticalSpacer_28">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
        <layout class="QHBoxLayout" name="horizontalLayout_15">
         <item>
          <widget class="QLabel" name="label_22">
@@ -1896,6 +2064,19 @@ best possible care for their patients.</string>
          </widget>
         </item>
        </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_29">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
       </item>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_43">
@@ -1942,6 +2123,19 @@ best possible care for their patients.</string>
        </layout>
       </item>
       <item>
+       <spacer name="verticalSpacer_30">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
        <widget class="QPushButton" name="Add_Patient_Button">
         <property name="minimumSize">
          <size>
@@ -1966,31 +2160,33 @@ best possible care for their patients.</string>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="Add_Patient_Confirm">
-        <property name="minimumSize">
+       <spacer name="verticalSpacer_31">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
          <size>
-          <width>230</width>
+          <width>20</width>
           <height>40</height>
          </size>
         </property>
-        <property name="maximumSize">
-         <size>
-          <width>230</width>
-          <height>40</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>11</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
+       </spacer>
       </item>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_30">
+        <item>
+         <spacer name="verticalSpacer_32">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
         <item>
          <widget class="QLabel" name="label_24">
           <property name="minimumSize">
@@ -2043,517 +2239,505 @@ best possible care for their patients.</string>
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="layoutWidget">
+    <widget class="QWidget" name="">
      <property name="geometry">
       <rect>
-       <x>300</x>
+       <x>310</x>
        <y>100</y>
-       <width>427</width>
-       <height>388</height>
+       <width>425</width>
+       <height>321</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_15">
+     <layout class="QVBoxLayout" name="verticalLayout_14">
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout_14">
+       <layout class="QVBoxLayout" name="verticalLayout_13">
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout_13">
+         <layout class="QHBoxLayout" name="horizontalLayout_26">
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_26">
-            <item>
-             <spacer name="horizontalSpacer_34">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_23">
-              <property name="minimumSize">
-               <size>
-                <width>210</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>210</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>15</pointsize>
-               </font>
-              </property>
-              <property name="text">
-               <string>Update Patient Details:</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer_35">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <spacer name="verticalSpacer_7">
+           <spacer name="horizontalSpacer_34">
             <property name="orientation">
-             <enum>Qt::Vertical</enum>
+             <enum>Qt::Horizontal</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>20</width>
-              <height>40</height>
+              <width>40</width>
+              <height>20</height>
              </size>
             </property>
            </spacer>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_44">
-            <item>
-             <spacer name="horizontalSpacer_45">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_46">
-              <item>
-               <widget class="QLabel" name="label_39">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>25</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>100</width>
-                  <height>25</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>12</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>Patient Name:</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="Update_Patient_Name">
-                <property name="minimumSize">
-                 <size>
-                  <width>110</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>110</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer_46">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-           </layout>
+           <widget class="QLabel" name="label_23">
+            <property name="minimumSize">
+             <size>
+              <width>210</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>210</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Update Patient Details:</string>
+            </property>
+           </widget>
           </item>
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_12">
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_21">
-              <item>
-               <widget class="QRadioButton" name="Student_Number_Radio">
-                <property name="minimumSize">
-                 <size>
-                  <width>135</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>135</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>11</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>Student Number:</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QRadioButton" name="Patient_Address_Radio_2">
-                <property name="minimumSize">
-                 <size>
-                  <width>135</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>135</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>11</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>Paitent Address</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QRadioButton" name="Patient_Postcode_Radio">
-                <property name="minimumSize">
-                 <size>
-                  <width>135</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>135</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>11</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>Patient Postcode</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_24">
-              <item>
-               <widget class="QLineEdit" name="Update_Patient_Student_Number">
-                <property name="minimumSize">
-                 <size>
-                  <width>110</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>110</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="Update_Patient_Address_2">
-                <property name="minimumSize">
-                 <size>
-                  <width>110</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>110</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="Update_Patient_Postcode">
-                <property name="minimumSize">
-                 <size>
-                  <width>110</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>110</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <spacer name="verticalSpacer_6">
+           <spacer name="horizontalSpacer_35">
             <property name="orientation">
-             <enum>Qt::Vertical</enum>
+             <enum>Qt::Horizontal</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>20</width>
-              <height>40</height>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_44">
+          <item>
+           <spacer name="horizontalSpacer_45">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
              </size>
             </property>
            </spacer>
           </item>
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_11">
+           <layout class="QHBoxLayout" name="horizontalLayout_46">
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_22">
-              <item>
-               <widget class="QRadioButton" name="Patient_DOB_Radio">
-                <property name="minimumSize">
-                 <size>
-                  <width>135</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>135</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>11</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>Patient D.O.B:</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QRadioButton" name="Patient_Height_Radio">
-                <property name="minimumSize">
-                 <size>
-                  <width>135</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>135</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>11</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>Patient Height:</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QRadioButton" name="Patient_Weight_Radio">
-                <property name="minimumSize">
-                 <size>
-                  <width>135</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>135</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>11</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>Patient Weight:</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_23">
-              <item>
-               <widget class="QLineEdit" name="Update_Patient_DOB">
-                <property name="minimumSize">
-                 <size>
-                  <width>110</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>110</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="Update_Patient_Height">
-                <property name="minimumSize">
-                 <size>
-                  <width>110</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>110</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="Update_Patient_Weight">
-                <property name="minimumSize">
-                 <size>
-                  <width>110</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>110</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_25">
-            <item>
-             <spacer name="horizontalSpacer_32">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QPushButton" name="Update_Patient_Button">
+             <widget class="QLabel" name="label_39">
               <property name="minimumSize">
                <size>
-                <width>130</width>
-                <height>40</height>
+                <width>100</width>
+                <height>25</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>130</width>
-                <height>40</height>
+                <width>100</width>
+                <height>25</height>
                </size>
               </property>
               <property name="font">
                <font>
-                <pointsize>13</pointsize>
+                <pointsize>12</pointsize>
                </font>
               </property>
               <property name="text">
-               <string>UPDATE</string>
+               <string>Patient Name:</string>
               </property>
              </widget>
             </item>
             <item>
-             <spacer name="horizontalSpacer_33">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
+             <widget class="QLineEdit" name="Update_Patient_Name">
+              <property name="minimumSize">
                <size>
-                <width>40</width>
+                <width>110</width>
                 <height>20</height>
                </size>
               </property>
-             </spacer>
+              <property name="maximumSize">
+               <size>
+                <width>110</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_46">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_22">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_12">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_21">
+            <item>
+             <widget class="QRadioButton" name="Student_Number_Radio">
+              <property name="minimumSize">
+               <size>
+                <width>135</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>135</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Student Number:</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="Patient_Address_Radio_2">
+              <property name="minimumSize">
+               <size>
+                <width>135</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>135</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Paitent Address</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="Patient_Postcode_Radio">
+              <property name="minimumSize">
+               <size>
+                <width>135</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>135</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Patient Postcode</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_24">
+            <item>
+             <widget class="QLineEdit" name="Update_Patient_Student_Number">
+              <property name="minimumSize">
+               <size>
+                <width>110</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>110</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="Update_Patient_Address_2">
+              <property name="minimumSize">
+               <size>
+                <width>110</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>110</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="Update_Patient_Postcode">
+              <property name="minimumSize">
+               <size>
+                <width>110</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>110</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
          </layout>
         </item>
         <item>
-         <widget class="QLabel" name="Update_Patient_Confirm">
-          <property name="minimumSize">
+         <spacer name="verticalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
            <size>
-            <width>230</width>
+            <width>20</width>
             <height>40</height>
            </size>
           </property>
-          <property name="maximumSize">
+         </spacer>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_11">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_22">
+            <item>
+             <widget class="QRadioButton" name="Patient_DOB_Radio">
+              <property name="minimumSize">
+               <size>
+                <width>135</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>135</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Patient D.O.B:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="Patient_Height_Radio">
+              <property name="minimumSize">
+               <size>
+                <width>135</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>135</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Patient Height:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="Patient_Weight_Radio">
+              <property name="minimumSize">
+               <size>
+                <width>135</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>135</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Patient Weight:</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_23">
+            <item>
+             <widget class="QLineEdit" name="Update_Patient_DOB">
+              <property name="minimumSize">
+               <size>
+                <width>110</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>110</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="Update_Patient_Height">
+              <property name="minimumSize">
+               <size>
+                <width>110</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>110</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="Update_Patient_Weight">
+              <property name="minimumSize">
+               <size>
+                <width>110</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>110</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_7">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
            <size>
-            <width>230</width>
+            <width>20</width>
             <height>40</height>
            </size>
           </property>
-          <property name="font">
-           <font>
-            <pointsize>11</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_25">
+          <item>
+           <spacer name="horizontalSpacer_32">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="Update_Patient_Button">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>130</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>13</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>UPDATE</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_33">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
         </item>
        </layout>
       </item>
@@ -2608,6 +2792,10 @@ best possible care for their patients.</string>
         <property name="text">
          <string>Home</string>
         </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../newworld.png</normaloff>../../newworld.png</iconset>
+        </property>
        </widget>
       </item>
       <item>
@@ -2653,6 +2841,10 @@ best possible care for their patients.</string>
         <property name="text">
          <string>Patients</string>
         </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../newpatient.png</normaloff>../../newpatient.png</iconset>
+        </property>
        </widget>
       </item>
       <item>
@@ -2691,6 +2883,10 @@ best possible care for their patients.</string>
         </property>
         <property name="text">
          <string>Tests Taken</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../testtaken.png</normaloff>../../testtaken.png</iconset>
         </property>
        </widget>
       </item>
@@ -2731,6 +2927,10 @@ best possible care for their patients.</string>
         <property name="text">
          <string>Tests</string>
         </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../test.png</normaloff>../../test.png</iconset>
+        </property>
        </widget>
       </item>
       <item>
@@ -2752,9 +2952,9 @@ best possible care for their patients.</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>80</y>
+       <y>90</y>
        <width>801</width>
-       <height>365</height>
+       <height>371</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_47">
@@ -2785,6 +2985,19 @@ best possible care for their patients.</string>
              <string>Remove Patient:</string>
             </property>
            </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_35">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
           </item>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_13">
@@ -2987,6 +3200,19 @@ best possible care for their patients.</string>
          </widget>
         </item>
         <item>
+         <spacer name="verticalSpacer_33">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
          <layout class="QHBoxLayout" name="horizontalLayout_12">
           <item>
            <widget class="QLabel" name="label_13">
@@ -3029,6 +3255,19 @@ best possible care for their patients.</string>
            </widget>
           </item>
          </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_34">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
         </item>
         <item>
          <widget class="QPushButton" name="Search_Patient_Button">
@@ -3229,6 +3468,10 @@ best possible care for their patients.</string>
         <property name="text">
          <string>Home</string>
         </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../newworld.png</normaloff>../../newworld.png</iconset>
+        </property>
        </widget>
       </item>
       <item>
@@ -3274,6 +3517,10 @@ best possible care for their patients.</string>
         <property name="text">
          <string>Patients</string>
         </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../newpatient.png</normaloff>../../newpatient.png</iconset>
+        </property>
        </widget>
       </item>
       <item>
@@ -3312,6 +3559,10 @@ best possible care for their patients.</string>
         </property>
         <property name="text">
          <string>Tests Taken</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../testtaken.png</normaloff>../../testtaken.png</iconset>
         </property>
        </widget>
       </item>
@@ -3352,6 +3603,10 @@ best possible care for their patients.</string>
         <property name="text">
          <string>Tests</string>
         </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../test.png</normaloff>../../test.png</iconset>
+        </property>
        </widget>
       </item>
       <item>
@@ -3375,40 +3630,83 @@ best possible care for their patients.</string>
        <x>420</x>
        <y>90</y>
        <width>380</width>
-       <height>231</height>
+       <height>141</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_19">
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_18">
         <item>
-         <widget class="QLabel" name="label_28">
-          <property name="minimumSize">
-           <size>
-            <width>170</width>
-            <height>16</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>170</width>
-            <height>16</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>15</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Remove Test:</string>
-          </property>
-         </widget>
-        </item>
-        <item>
          <layout class="QVBoxLayout" name="verticalLayout_20">
           <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_51">
+            <item>
+             <spacer name="horizontalSpacer_66">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_28">
+              <property name="minimumSize">
+               <size>
+                <width>170</width>
+                <height>16</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>170</width>
+                <height>16</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Remove Test:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_67">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
            <layout class="QHBoxLayout" name="horizontalLayout_27">
+            <item>
+             <spacer name="horizontalSpacer_68">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
             <item>
              <widget class="QLabel" name="label_29">
               <property name="minimumSize">
@@ -3448,6 +3746,19 @@ best possible care for their patients.</string>
                </size>
               </property>
              </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_69">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
            </layout>
           </item>
@@ -3516,7 +3827,7 @@ best possible care for their patients.</string>
       <rect>
        <x>0</x>
        <y>90</y>
-       <width>414</width>
+       <width>434</width>
        <height>421</height>
       </rect>
      </property>
@@ -3593,6 +3904,19 @@ best possible care for their patients.</string>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_45">
           <item>
+           <spacer name="horizontalSpacer_64">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
            <widget class="QLabel" name="label_40">
             <property name="minimumSize">
              <size>
@@ -3632,6 +3956,19 @@ best possible care for their patients.</string>
             </property>
            </widget>
           </item>
+          <item>
+           <spacer name="horizontalSpacer_65">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
          </layout>
         </item>
         <item>
@@ -3651,6 +3988,19 @@ best possible care for their patients.</string>
          <layout class="QVBoxLayout" name="verticalLayout_22">
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_31">
+            <item>
+             <spacer name="horizontalSpacer_70">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
             <item>
              <widget class="QRadioButton" name="Test_Name_Radio">
               <property name="minimumSize">
@@ -3673,7 +4023,23 @@ best possible care for their patients.</string>
               <property name="text">
                <string>Test Name:</string>
               </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
              </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_72">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
             <item>
              <widget class="QRadioButton" name="Test_DDescription_Radio">
@@ -3700,6 +4066,19 @@ best possible care for their patients.</string>
              </widget>
             </item>
             <item>
+             <spacer name="horizontalSpacer_73">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
              <widget class="QRadioButton" name="Test_Price_Radio">
               <property name="minimumSize">
                <size>
@@ -3723,6 +4102,19 @@ best possible care for their patients.</string>
               </property>
              </widget>
             </item>
+            <item>
+             <spacer name="horizontalSpacer_71">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
            </layout>
           </item>
           <item>
@@ -3744,6 +4136,19 @@ best possible care for their patients.</string>
              </widget>
             </item>
             <item>
+             <spacer name="horizontalSpacer_75">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
              <widget class="QLineEdit" name="Update_Test_Desc">
               <property name="minimumSize">
                <size>
@@ -3758,6 +4163,19 @@ best possible care for their patients.</string>
                </size>
               </property>
              </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_76">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
             <item>
              <widget class="QLineEdit" name="Update_Test_Price">
@@ -3775,22 +4193,22 @@ best possible care for their patients.</string>
               </property>
              </widget>
             </item>
+            <item>
+             <spacer name="horizontalSpacer_77">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
            </layout>
           </item>
          </layout>
-        </item>
-        <item>
-         <spacer name="verticalSpacer_5">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
         </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_35">
@@ -3964,6 +4382,10 @@ best possible care for their patients.</string>
         <property name="text">
          <string>Home</string>
         </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../newworld.png</normaloff>../../newworld.png</iconset>
+        </property>
        </widget>
       </item>
       <item>
@@ -4009,6 +4431,10 @@ best possible care for their patients.</string>
         <property name="text">
          <string>Patients</string>
         </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../newpatient.png</normaloff>../../newpatient.png</iconset>
+        </property>
        </widget>
       </item>
       <item>
@@ -4048,6 +4474,10 @@ best possible care for their patients.</string>
         <property name="text">
          <string>Tests Taken</string>
         </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../testtaken.png</normaloff>../../testtaken.png</iconset>
+        </property>
        </widget>
       </item>
       <item>
@@ -4086,6 +4516,10 @@ best possible care for their patients.</string>
         </property>
         <property name="text">
          <string>Tests</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../test.png</normaloff>../../test.png</iconset>
         </property>
        </widget>
       </item>
@@ -4164,6 +4598,19 @@ best possible care for their patients.</string>
           </property>
          </widget>
         </item>
+        <item>
+         <spacer name="horizontalSpacer_74">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
        </layout>
       </item>
       <item>
@@ -4208,28 +4655,58 @@ best possible care for their patients.</string>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_23">
         <item>
-         <widget class="QLabel" name="label_31">
-          <property name="minimumSize">
-           <size>
-            <width>170</width>
-            <height>16</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>170</width>
-            <height>16</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>15</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Add Test:</string>
-          </property>
-         </widget>
+         <layout class="QHBoxLayout" name="horizontalLayout_52">
+          <item>
+           <spacer name="horizontalSpacer_78">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_31">
+            <property name="minimumSize">
+             <size>
+              <width>90</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>90</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Add Test:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_79">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
         </item>
         <item>
          <spacer name="verticalSpacer_14">

@@ -514,18 +514,21 @@ class MainWindow():
 
     def About_Me_Popup(self):
         msg = QMessageBox()
-        fia1 = "Fia1"
-        tutor_app = ("Tutor App")
-        brad = "Brad"
+        fia1 = "TaribelangProject"
+        tutor_app = ("BMR-BMI Health Calculator")
+        brad = "Brad-File"
         github = ("@srcoggin")
         # Set the text and title
         msg.setText(f"""
         Thank you for using Bundy Health Care! 
         This App was Coded and Developed by Will Coggins 
         This App was Devleoped from 23/05/2023 to 26/05/2023
-        Please Enjoy my other works such as {fia1}, {tutor_app}, and {brad}. 
-        All of which and many more fun and serious Python coded projects can be found on my github: 
-        {github}: Please follow and Star my Repos
+        Please Enjoy my other works such as {fia1}, 
+        {tutor_app}, and {brad}. 
+        All of which and many more fun and 
+        serious Python coded projects can be found on my github: 
+        {github} 
+        Please follow me, and Star my Repos!
                     """)
         msg.setWindowTitle("About Me!")
         #Set the buttons to include a close button
