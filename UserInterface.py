@@ -320,6 +320,7 @@ class Ui_MainWindow(object):
         font.setPointSize(12)
         self.TestTaken_Seach_Field.setFont(font)
         self.TestTaken_Seach_Field.setText("")
+        self.TestTaken_Seach_Field.setWordWrap(True)
         self.TestTaken_Seach_Field.setObjectName("TestTaken_Seach_Field")
         self.verticalLayout_16.addWidget(self.TestTaken_Seach_Field)
         self.horizontalLayout_41.addLayout(self.verticalLayout_16)
