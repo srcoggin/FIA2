@@ -89,21 +89,26 @@ class MainWindow():
         date = self.ui.Insert_Date_Test_Taken.text() 
         result = self.ui.Insert_Test_Results.text() 
         ds.insert_patient_test_results(name, code, date, result)
-        self.successful_popup()
-        self.ui.Insert_Patient_Name.clear()
-        self.ui.Insert_Test_Code.clear()
-        self.ui.Insert_Date_Test_Taken.clear() 
-        self.ui.Insert_Test_Results.clear()
+        if code not in ds.retrieve_test_code():
+            self.error()
+        else:
+            self.successful_popup()
+            self.ui.Insert_Patient_Name.clear()
+            self.ui.Insert_Test_Code.clear()    
+            self.ui.Insert_Date_Test_Taken.clear() 
+            self.ui.Insert_Test_Results.clear()
 
 
     def Search_TestTaken(self):
         info = ds.select_patient_results_all_tests(self.ui.Search_Test_Taken_Name.text())
+        text = ""
         for i in info:
-            self.ui.TestTaken_Seach_Field.setText("""
+            text += """
 Test Code: {}
 Date Test Taken: {}
 Test Result:  {}
-            """.format(i[0], i[1], i[2]))
+            """.format(i[0], i[1], i[2])
+        self.ui.TestTaken_Seach_Field.setText(text)
 
     def Update_Test_Details(self):
         tests = self.ui.Update_Test_Code.text()
@@ -452,15 +457,17 @@ List of Patients:
     def ListOfTests(self):
         #gathers the list of tests from data store and displays them
         code =  ds.display_all_tests()
+        text = ""
         for k, i in code:
-            self.ui.List_Of_Tests_Field.setText('''
-List Of Tests:
-
+            text += '''
 Test Code:  {}
 Expanded:   {}
 Definition: {}
 Price:      {}
-'''.format(k, i[0], i[1], i[2]))
+'''.format(k, i[0], i[1], i[2])
+        self.ui.List_Of_Tests_Field.setText(f'''
+List of Tests:
+{text}''')
         
     def ssshhhSECRET(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.Brad_Page)

@@ -1159,7 +1159,7 @@
             </property>
             <property name="font">
              <font>
-              <pointsize>12</pointsize>
+              <pointsize>7</pointsize>
              </font>
             </property>
             <property name="text">
@@ -3410,7 +3410,7 @@ best possible care for their patients.</string>
           </property>
           <property name="font">
            <font>
-            <pointsize>9</pointsize>
+            <pointsize>15</pointsize>
            </font>
           </property>
           <property name="text">
@@ -4638,7 +4638,7 @@ best possible care for their patients.</string>
         </property>
         <property name="font">
          <font>
-          <pointsize>9</pointsize>
+          <pointsize>6</pointsize>
          </font>
         </property>
         <property name="text">
