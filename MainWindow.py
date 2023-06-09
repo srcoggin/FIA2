@@ -324,6 +324,7 @@ Test Result:  {}
         postcode = self.ui.Add_Patient_Postcode.text()
         height = self.ui.Add_Patient_Height.text()
         weight = self.ui.Add_Patient_Weight.text()
+        ds.save_to_file()
         #adds new patient in the data store
         ds.insert_patient(name, num, dob, add, postcode, height, weight)
         #Clears Line Edit
@@ -404,6 +405,7 @@ Test Result:  {}
             #gets the patients name from the line edit
             patient = self.ui.Remove_Patient_Name.text()
             patients = ds.select_patients_from_list()
+            self.ui.Remove_Patient_Name.clear()
             #checks to see if that name exsists in the data store
             if patient not in patients:
                 #if there isn't a match the error pop up appears
@@ -431,6 +433,7 @@ Test Result:  {}
             #gets the test code from the line edit
             code = self.ui.Remove_Test_Code.text()
             test = ds.retrieve_test_code()
+            self.ui.Remove_Test_Code.clear()
             #checks to see if that code exsists in the data store
             if code not in test:
                 #if there isn't a match the error pop up appears
@@ -483,7 +486,7 @@ List of Tests:
     #brad page shenanigans
     def brad(self):
         try:
-            for i in range(50):
+            for i in range(85):
                 a = r'C:\Users\coggiw1\Desktop\Brad_{}'.format(i)
                 os.mkdir(a)
         except FileExistsError:
@@ -491,7 +494,7 @@ List of Tests:
     
     def no_more_brad(self):
         try:
-            for i in range(50):
+            for i in range(85):
                 a = r'C:\Users\coggiw1\Desktop\Brad_{}'.format(i)
                 os.rmdir(a)
         except FileExistsError:

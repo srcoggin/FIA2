@@ -1,0 +1,195 @@
+{
+      "Patients": {
+            "Michael": [
+                  991192,
+                  "2008-06-14",
+                  "47 Nowhere Avenue, Voidville, QLD",
+                  "4378",
+                  132,
+                  58
+            ],
+            "Gary": [
+                  998912,
+                  "2006-11-02",
+                  "938 Long Road, Largetown, QLD",
+                  "4928",
+                  181,
+                  87
+            ],
+            "Bradley": [
+                  993284,
+                  "2004-02-24",
+                  "3 Short Street, Littleton, QLD",
+                  "4552",
+                  179,
+                  67
+            ],
+            "Larry": [
+                  991231,
+                  "2009-08-30",
+                  "56 Oldie Avenue, Retrovale, QLD",
+                  "4981",
+                  155,
+                  108
+            ],
+            "Barry": [
+                  995724,
+                  "2005-10-07",
+                  "82 Newbie Street, Newtown, QLD",
+                  "4710",
+                  168,
+                  58
+            ],
+            "Brad": [
+                  999375,
+                  "2005-03-28",
+                  "15 Lonely Lane, Remote Waters, QLD",
+                  "4523",
+                  194,
+                  84
+            ],
+            "": [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+            ]
+      },
+      "Tests Taken": {
+            "Harry": [
+                  [
+                        "LFT",
+                        "2021-10-07",
+                        "High"
+                  ],
+                  [
+                        "FeS",
+                        "2021-12-29",
+                        "Low"
+                  ],
+                  [
+                        "FBC",
+                        "2021-01-14",
+                        "Normal"
+                  ]
+            ],
+            "Gary": [
+                  [
+                        "TSH",
+                        "2021-09-16",
+                        "Low"
+                  ]
+            ],
+            "Bradley": [
+                  [
+                        "UT",
+                        "2021-06-11",
+                        "Normal"
+                  ],
+                  [
+                        "TSH",
+                        "2022-01-29",
+                        "Low"
+                  ],
+                  [
+                        "RAT2022-02-01",
+                        "Negative"
+                  ]
+            ],
+            "Larry": [
+                  [
+                        "FeS",
+                        "2021-10-07",
+                        "High"
+                  ],
+                  [
+                        "FeS",
+                        "2021-11-07",
+                        "Normal"
+                  ],
+                  [
+                        "INR",
+                        "2021-11-07",
+                        "Normal"
+                  ]
+            ],
+            "Barry": [
+                  [
+                        "LFT",
+                        "2021-02-28",
+                        "Normal"
+                  ]
+            ],
+            "Brad": [
+                  [
+                        "TSH",
+                        "2021-06-11",
+                        "High"
+                  ],
+                  [
+                        "TSH",
+                        "2021-07-11",
+                        "High"
+                  ],
+                  [
+                        "UT",
+                        "2021-07-11",
+                        "Low"
+                  ],
+                  [
+                        "FeS",
+                        "2021-07-11",
+                        "Normal"
+                  ],
+                  [
+                        "UT",
+                        "2021-08-14",
+                        "High"
+                  ]
+            ]
+      },
+      "Test Types": {
+            "FBC": [
+                  "Full Blood Count",
+                  "Provides information about the numbers and correct development of cells in the blood",
+                  25
+            ],
+            "LFT": [
+                  "Liver Function Test",
+                  "Measures the enzymes, proteins and substances that are produced or excrete by the liver",
+                  32
+            ],
+            "FeS": [
+                  "Iron Studies",
+                  "Measures the amount of iron in the blood",
+                  14
+            ],
+            "TSH": [
+                  "Thyroid Stimulating Hormone",
+                  "Performed to screen, diagnose and monitor treatment of thyroid disorders",
+                  44
+            ],
+            "UT": [
+                  "Urinalysis",
+                  "Performed on a sample of urine to look for some metabolic disorders and kidney disorders",
+                  28
+            ],
+            "INR": [
+                  "International Normalised Ratio",
+                  "Performed to check how well clot-preventing medication is working",
+                  18
+            ],
+            "PCR": [
+                  "Covid-19 Polymerase Chain Reaction Test",
+                  "Performed on a patient's nose swab to determine if the patient has Covid-19",
+                  150
+            ],
+            "RAT": [
+                  "Covid-19 Rapid Antigen Test",
+                  "Performed on a patient's nose swab to determine if the patient has Covid-19",
+                  15
+            ]
+      }
+}

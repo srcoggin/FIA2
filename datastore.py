@@ -1,4 +1,6 @@
 from typing import ClassVar, Dict, List, Union
+import os
+import json
 
 
 class DataStore:
@@ -33,6 +35,23 @@ class DataStore:
                 weight (str): Patient weight
         """
         self.patient[name] = [num, dob, add, postcode, height, weight]
+
+
+
+    def save_to_file(self):
+        """
+            Description:
+                Takes stored data and saves it to file.
+        """
+        try:
+            dump = {"Patients": self.patient, "Tests Taken": self.tests_taken, "Test Types": self.test_type}
+            out_file = open("data.json", "w")
+            json.dump(dump, out_file, indent=6)
+            return True
+        except Exception:
+            return False
+        
+
 
     def remove_patient(self, name: str):
         """
